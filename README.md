@@ -1,45 +1,35 @@
 # WingUI
 
-This template should help get you started developing with Vue 3 in Vite.
+[日本語](./README_ja.md)
 
-## Recommended IDE Setup
+WingUI is a UI library built for Vue3 and Tailwind.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+It complements the Javascript code that Tailwind lacks. The design is simple and modifiable.
 
-## Type Support for `.vue` Imports in TS
+## Installation
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```bash
+npm i @wingui/vue
 ```
 
-### Compile and Hot-Reload for Development
+## Components
 
-```sh
-npm run dev
+### Button
+
+```ts
+<template>
+  <Button>Click me.</Button>
+</template>
+
+<script setup lang="ts">
+import { Button } from "@wingui/vue"
+</script>
 ```
 
-### Type-Check, Compile and Minify for Production
+#### Props
 
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+|Name|Type|Default| Description |
+|:--|:--|:--|:--|
+| block | Boolean | false | If true, Tailwind's w-full class is granted. |
+| href | String | undefined | When the `href` attribute is set, the `input` is changed to the `a`. |
+| disabled | Boolean | false | If true, inactive. |
